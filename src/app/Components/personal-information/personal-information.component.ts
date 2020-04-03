@@ -18,16 +18,9 @@ export class PersonalInformationComponent implements OnInit {
   'Kingston','Portland','Saint Andrew','Saint Thomas'
 
 ];
- public test ={
-  "id":"101", 
-  "sender": "Smart Park",
-  "reciever":"Odain",
-  "message":"Hi Admin the parking area you parked in cost JMD $100.00 per hour.",
-  "sentTime":"24 March 2020 5:27:23",
-  "status":"sent"
-}
+
  
-constructor(private userState:DataStateService) { }
+constructor(private userState:DataStateService,private nodeUtil:NodeUtilitiesService) { }
 
 ngOnInit(): void {
 
@@ -39,8 +32,7 @@ ngOnInit(): void {
 
   public submitPersonalInfo():void{
 
-   // this.nodeUtil.postData(this.user);
-  // this.nodeUtil.postData(this.test); 
+   this.nodeUtil.postData(this.user);
   console.log(this.user);
 
   }

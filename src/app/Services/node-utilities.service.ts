@@ -14,8 +14,7 @@ import { IUser } from '../Interface/iuser';
 })
 export class NodeUtilitiesService {
 
-  private postUrl:string = `http://18.191.167.252:3010/innovate/covid/`;
-  private testUrl:string = 'http://localhost:5001/smartparkingproject-51b95/us-central1/app/api/createMessageIn';
+  private postUrl:string = `http://18.191.167.252:3010/innovate/covid/insert/`;
   private getUrl;
   
   httpOptions={
@@ -28,8 +27,8 @@ export class NodeUtilitiesService {
   constructor(private http: HttpClient) { }
 
 
-  public postData(object):void{
-    this.http.post(this.testUrl,object).toPromise().then(data=>{
+  public postData(object:IUser):void{
+    this.http.post(this.postUrl,object).toPromise().then(data=>{
       console.log(data);
     },
         (err: HttpErrorResponse) => {
