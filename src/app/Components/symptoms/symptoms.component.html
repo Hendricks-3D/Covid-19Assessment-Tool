@@ -1,0 +1,49 @@
+
+
+
+
+
+  <h3>Symptoms</h3>
+
+  <hr class="line">
+
+  <P><b>
+    Are you experiencing any of the following symptoms?
+    Select the ones that apply to you.
+</b></P>
+
+  <div class="card"  id="fever" (click)="changeFever()">
+
+    <label >Fever</label>
+
+  </div>
+
+  <div class="card" id="breathing" (click)="changeBreathing()">
+
+    <label >Breathing</label>
+
+  </div>
+
+  <div class="card" id="fatique" (click)="changeFatique()">
+
+    <label >Fatique</label>
+
+  </div>
+
+  <div class="card" (click)="runnyNose()" id="nose">
+
+    <label for="symptom_running_nose">Runny Nose:</label>
+
+  </div>
+
+
+  <div class="form-group">
+    <label for="date">First Symptom Date</label>
+    <input type="date" class="form-control" id="inputField" placeholder="Symptom Date"  [(ngModel)]="user.symptom_date">
+  </div>
+
+
+
+
+
+  <button type="submit" class="submit-btn" (click)="next()">Next</button>

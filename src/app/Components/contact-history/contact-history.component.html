@@ -1,0 +1,30 @@
+    <h3>Travel Details</h3>
+
+    <hr class="line">
+
+
+    <div class="card" id="travel" (click)="changeTravel()">
+
+    <label >Travel</label>
+    </div>
+
+    <div class="form-group">
+    <label for="age">Travel Date</label>
+    <input type="date" class="form-control" id="inputField" placeholder="Travel Date"  [(ngModel)]="user.travel_date">
+    </div>
+
+    <div class="card" id="contact" (click)="changeContact()">
+
+    <label >Contact Travel</label>
+    </div>
+
+
+
+
+    <div class="card" id="contactFlu" (click)="changeContactFlu()">
+
+    <label >Contact with flu:</label>
+    </div>
+
+
+    <button type="submit" class="submit-btn" (click)="next()">Next</button>
