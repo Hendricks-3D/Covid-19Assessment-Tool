@@ -37,6 +37,9 @@ export class DataStateService {
         symptom_breathing:'N',
         symptom_fatique:'N',
         symptom_date:'N',
+        symptom_cough:'N',
+        symptom_sore_throat:'N',
+        symptom_chest_pain:'N',
     
         //travel information
         travel:'N',
@@ -48,6 +51,10 @@ export class DataStateService {
         pre_diabetes:'N',
         pre_hypertension:'N',
         pre_respiratory:'N',
+        pre_lung:'N',
+        pre_sickle:'N',
+        pre_heart:'N',
+    
         //travel
       countries:'',
       departure_date:'',

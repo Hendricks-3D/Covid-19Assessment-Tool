@@ -25,7 +25,7 @@ h3{
     border: 1px solid #eee;
 
     height: 40px;
-    width: 200px;
+    width: 100%;
     margin: 0 8px 16px;
     padding: 10px;
     display:inline-flex;
@@ -51,14 +51,64 @@ h3{
     background-color: #fafafa;
 }
 
+#throat{
+  background-color: #fafafa;
+}
+
+#chest{
+  background-color: #fafafa;
+}
+
+#cough{
+  background-color: #fafafa;
+}
 
   label{
       margin-right:4px
   }
 
 
+  .scroll { 
+
+    padding:4px; 
+    width: 250px; 
+    height: 300px; 
+    overflow-x: hidden; 
+    overflow-x: auto; 
+    text-align:justify; 
+}
+
+  .page-number-card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px 16px;
+    padding-top: 5px;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
 
 
+  .complete{
+    border: 1px solid #eee;
+    background-color: rgb(207, 247, 113);
+  }
+
+
+  .incomplete{
+    border: 1px solid rgb(207, 247, 113);
+    background-color: #fafafa;
+  }
+
+.float{
+    float:right;
+}
   /**
   Media Queries
   */

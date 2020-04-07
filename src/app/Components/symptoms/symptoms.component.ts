@@ -120,6 +120,51 @@ export class SymptomsComponent implements OnInit {
   }
 
 
+  changeCough():void{
+    console.log("It works");
+    if(this.user.symptom_cough===''|| this.user.symptom_cough=="N")
+    {
+      this.user.symptom_cough= 'Y'
+      document.getElementById('cough').style.backgroundColor="rgb(207, 247, 113)"
+      
+    }else
+    {
+      this.user.symptom_cough = 'N'
+      document.getElementById('cough').style.backgroundColor="#fafafa"
+    }
+    
+  }
+
+  changeChest():void{
+    console.log("It works");
+    if(this.user.symptom_chest_pain===''|| this.user.symptom_chest_pain=="N")
+    {
+      this.user.symptom_chest_pain= 'Y'
+      document.getElementById('chest').style.backgroundColor="rgb(207, 247, 113)"
+     
+    }else
+    {
+      this.user.symptom_chest_pain= 'N'
+      document.getElementById('chest').style.backgroundColor="#fafafa"
+    }
+    
+  }
+
+
+  changeThroat():void{
+    console.log("It works");
+    if(this.user.symptom_sore_throat===''|| this.user.symptom_sore_throat=="N")
+    {
+      this.user.symptom_sore_throat= 'Y'
+      document.getElementById('throat').style.backgroundColor="rgb(207, 247, 113)"
+      
+    }else
+    {
+      this.user.symptom_sore_throat = 'N'
+      document.getElementById('throat').style.backgroundColor="#fafafa"
+    }
+    
+  }
 
   //------------------------------------------------------------------------------------------
 

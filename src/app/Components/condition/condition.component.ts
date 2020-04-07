@@ -72,24 +72,59 @@ export class ConditionComponent implements OnInit {
 
 
 
-  changeRespitory():void{
+  changeHeart():void{
 
-    if(this.user.pre_respiratory===''|| this.user.pre_respiratory==="N")
+    if(this.user.pre_heart===''|| this.user.pre_heart==="N")
     {
-      this.user.pre_respiratory='Y'
-      document.getElementById('respitory').style.backgroundColor="rgb(207, 247, 113)"
+      this.user.pre_heart='Y'
+      document.getElementById('heart').style.backgroundColor="rgb(207, 247, 113)"
      
     }else
     {
-      this.user.pre_respiratory= 'N'
-      document.getElementById('respitory').style.backgroundColor="#fafafa"
+      this.user.pre_heart= 'N'
+      document.getElementById('heart').style.backgroundColor="#fafafa"
     }
     
   }
 
 
 
+  changeSickle():void{
 
+    if(this.user.pre_sickle===''|| this.user.pre_sickle==="N")
+    {
+      this.user.pre_sickle='Y'
+      document.getElementById('sickle').style.backgroundColor="rgb(207, 247, 113)"
+     
+    }else
+    {
+      this.user.pre_sickle= 'N'
+      document.getElementById('sickle').style.backgroundColor="#fafafa"
+    }
+    
+  }
+
+
+  changeLung():void{
+
+    if(this.user.pre_lung===''|| this.user.pre_lung==="N")
+    {
+      this.user.pre_lung='Y'
+      document.getElementById('lung').style.backgroundColor="rgb(207, 247, 113)"
+     
+    }else
+    {
+      this.user.pre_lung= 'N'
+      document.getElementById('lung').style.backgroundColor="#fafafa"
+    }
+    
+  }
+
+//-------------------------------------------------------------------------------------
+
+
+
+  //Methods that will hide and show UI  elements
   public show():void{
     document.getElementById('no').style.backgroundColor="#fafafa";
     document.getElementById('yes').style.backgroundColor="rgb(207, 247, 113)"
@@ -104,4 +139,6 @@ export class ConditionComponent implements OnInit {
     this.showConditions =false;
   }
 
+
+  //--------------------------------------------------------------------
 }

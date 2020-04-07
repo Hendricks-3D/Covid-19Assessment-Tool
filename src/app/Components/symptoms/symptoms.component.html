@@ -1,6 +1,41 @@
 
 
 
+<div class="row float" >
+  <div clas="col-lg-3">
+    <div class="page-number-card  complete" id="one" >
+
+      <label >1</label>
+    </div>
+  </div>
+
+  <div clas="col-lg-3">
+    <div class="page-number-card  incomplete" id="two">
+
+      <label >2</label>
+    </div>
+  </div>
+
+  <div clas="col-lg-3">
+
+    <div class="page-number-card  incomplete" id="two">
+
+      <label >3</label>
+    </div> 
+
+  </div>
+
+  <div clas="col-lg-3">
+    <div class="page-number-card  incomplete" id="two">
+
+      <label >4</label>
+    </div>
+  </div>
+
+</div>
+
+
+
 
 
   <h3>Symptoms</h3>
@@ -9,41 +44,79 @@
 
   <P><b>
     Are you experiencing any of the following symptoms?
-    Select the ones that apply to you.
+    <br>
+    Please select ALL that apply to you.
 </b></P>
 
-  <div class="card"  id="fever" (click)="changeFever()">
 
-    <label >Fever</label>
-
-  </div>
-
-  <div class="card" id="breathing" (click)="changeBreathing()">
-
-    <label >Breathing</label>
-
-  </div>
-
-  <div class="card" id="fatique" (click)="changeFatique()">
-
-    <label >Fatique</label>
-
-  </div>
-
-  <div class="card" (click)="runnyNose()" id="nose">
-
-    <label for="symptom_running_nose">Runny Nose:</label>
-
-  </div>
+<div class="scroll">
 
 
-  <div class="form-group">
-    <label for="date">First Symptom Date</label>
-    <input type="date" class="form-control" id="inputField" placeholder="Symptom Date"  [(ngModel)]="user.symptom_date">
+
+  <div class="row">
+          
+    <div class="col-lg-6">
+      <div class="card"  id="fever" (click)="changeFever()">
+
+        <label >Fever</label>
+
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card" id="cough" (click)="changeCough()">
+
+        <label >Cough</label>
+    
+      </div>
+    </div>
   </div>
 
 
 
+        <div class="card" id="fatique" (click)="changeFatique()">
+
+          <label >Fatique</label>
+      
+        </div>
+
+        <div class="card" id="breathing" (click)="changeBreathing()">
+
+          <label >Shortness of breath</label>
+
+        </div>
+
+      
+
+        <div class="card" (click)="runnyNose()" id="nose">
+
+          <label for="symptom_running_nose">Runny Nose</label>
+
+        </div>
+
+        <div class="card" id="chest" (click)="changeChest()">
+
+          <label >Chest Pain</label>
+
+        </div>
+
+        <div class="card" id="throat" (click)="changeThroat()">
+
+          <label >Sore Throat</label>
+
+        </div>
+
+
+
+
+
+        <div class="form-group">
+          <label for="date">First Symptom Date</label>
+          <input type="date" class="form-control" id="inputField" placeholder="Symptom Date"  [(ngModel)]="user.symptom_date">
+        </div>
+
+
+</div>
 
 
   <button type="submit" class="submit-btn" (click)="next()">Next</button>

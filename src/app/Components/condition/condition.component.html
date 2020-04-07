@@ -1,6 +1,42 @@
 
 
-<h3>Pre-Existing Condions</h3>
+
+
+<div class="row float" >
+  <div clas="col-lg-3">
+    <div class="page-number-card  complete" id="one" >
+
+      <label >1</label>
+    </div>
+  </div>
+
+  <div clas="col-lg-3">
+    <div class="page-number-card  complete" id="two">
+
+      <label >2</label>
+    </div>
+  </div>
+
+  <div clas="col-lg-3">
+
+    <div class="page-number-card  incomplete" id="two">
+
+      <label >3</label>
+    </div> 
+
+  </div>
+
+  <div clas="col-lg-3">
+    <div class="page-number-card  incomplete" id="two">
+
+      <label >4</label>
+    </div>
+  </div>
+
+
+</div>
+
+<h3>Pre-Existing Conditions</h3>
         
 <hr class="line">
 
@@ -28,10 +64,36 @@
 </div>
 
 <ng-template [ngIf]="showConditions">
-      <div class="card" id="diabetes" (click)="changeDiabetes()">
 
-      <label >Diabetes</label>
+  <P><b>
+    Please select ALL that apply to you?
+  </b></P>
+
+
+
+  <div class="row">
+
+    <div class="col-lg-6"> 
+      <div class="new-card" id="heart" (click)="changeHeart()">
+
+        <label >Heart Disease</label>
+      
+      </div>
     </div>
+    
+    
+    <div class="col-lg-6"> 
+      <div class="new-card" id="diabetes" (click)="changeDiabetes()">
+
+        <label >Diabetes</label>
+      </div>
+    </div>
+      
+    </div>
+
+
+
+
 
 
     <div class="card" id="hypertension" (click)="changeHypertension()">
@@ -39,11 +101,24 @@
       <label >Hypertension</label>
     </div>
 
-    <div class="card" id="respitory" (click)="changeRespitory()">
 
-      <label >Respitory Problem:</label>
+
+
+    <div class="card" id="lung" (click)="changeLung()">
+
+      <label >Lung Desease</label>
     
     </div>
+
+    <div class="card" id="sickle" (click)="changeSickle()">
+
+      <label >Sickle Cell </label>
+    
+    </div>
+
+
+
+
 </ng-template>
 
 

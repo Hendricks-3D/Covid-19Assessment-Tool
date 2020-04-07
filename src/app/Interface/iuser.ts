@@ -16,6 +16,9 @@ export interface IUser {
     symptom_fever:string;
     symptom_breathing:string;
     symptom_fatique;
+    symptom_cough:string;
+    symptom_sore_throat:string;
+    symptom_chest_pain:string;
     symptom_date:string;
 
     //travel information
@@ -28,6 +31,9 @@ export interface IUser {
     pre_diabetes:string;
     pre_hypertension:string;
     pre_respiratory:string;
+    pre_lung:string;
+    pre_sickle:string;
+    pre_heart:string;
 
     //travel
     countries:string;
