@@ -48,6 +48,18 @@ export class DataStateService {
         pre_diabetes:'N',
         pre_hypertension:'N',
         pre_respiratory:'N',
+        //travel
+      countries:'',
+      departure_date:'',
+      arrival_date:'',
+      flight_number:'',
+      departure_port:'',
+      arrival_port:'',
+
+      emergency_name:'',
+      emergency_number:'',
+
+
     
     });
   user = this.userDataSource.asObservable();

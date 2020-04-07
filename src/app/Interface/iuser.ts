@@ -29,4 +29,16 @@ export interface IUser {
     pre_hypertension:string;
     pre_respiratory:string;
 
+    //travel
+    countries:string;
+    departure_date:string;
+    arrival_date:string;
+    flight_number:string;
+    departure_port:string;
+    arrival_port:string;
+
+    //emergency info
+    emergency_name:string;
+    emergency_number:string;
+
 }

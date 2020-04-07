@@ -7,44 +7,67 @@
 
 <hr class="line">
 
-<div class="form-group">
-<input type="text" class="form-control" id="inputField" placeholder="Full Name"  [(ngModel)]="user.fullName">
+
+<div class="scroll">
+
+
+      <div class="form-group">
+      <input type="text" class="form-control" id="inputField" placeholder="Full Name"  [(ngModel)]="user.fullName">
+      </div>
+
+
+
+
+      <div class="form-group">
+      <input type="email" class="form-control" id="inputField" aria-describedby="emailHelp" placeholder="Email Address" [(ngModel)]="user.email"> 
+
+      </div>
+
+
+      <div class="form-group">
+      <input type="text" class="form-control" id="inputField" placeholder="Age"  [(ngModel)]="user.age">
+
+      <div class="form-group">
+      <label>Gender</label>
+      <select [(ngModel)]="user.gender"  class="form-control" >
+      <option  *ngFor="let gen of gender"  [value]="gen">{{gen}}</option>
+      </select>
+      </div> 
+
+
+      <div class="form-group">
+      <input type="text" class="form-control" id="inputField" placeholder="Phone Number"  [(ngModel)]="user.mobile">
+      </div> 
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="inputField" placeholder="Community" [(ngModel)]="user.community">
+        </div>
+
+      <div class="form-group">
+      <label >Parish</label>
+      <select [(ngModel)]="user.parish"  class="form-control" >
+      <option  *ngFor="let parish of parishes"  [value]="parish">{{parish}}</option>
+      </select>
+
+
+<br>
+      <label>
+        <b>Emergency Contact Details</b>
+      </label>
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="inputField" placeholder="Full Name"  [(ngModel)]="user.emergency_name">
+        </div> 
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputField" placeholder="Contact Number"  [(ngModel)]="user.emergency_number">
+          </div> 
+          
+
+    </div>
+
+    </div>
 </div>
-
-
-
-
-<div class="form-group">
-<input type="email" class="form-control" id="inputField" aria-describedby="emailHelp" placeholder="Email Address" [(ngModel)]="user.email"> 
-
-</div>
-
-
-<div class="form-group">
-<input type="text" class="form-control" id="inputField" placeholder="Age"  [(ngModel)]="user.age">
-
-<div class="form-group">
-<label>Gender</label>
-<select [(ngModel)]="user.gender"  class="form-control" >
-<option  *ngFor="let gen of gender"  [value]="gen">{{gen}}</option>
-</select>
-</div> 
-
-
-<div class="form-group">
-<input type="text" class="form-control" id="inputField" placeholder="Phone Number"  [(ngModel)]="user.mobile">
-</div> 
-
-<div class="form-group">
-  <input type="text" class="form-control" id="inputField" placeholder="Community" [(ngModel)]="user.community">
-  </div>
-
-<div class="form-group">
-<label >Parish</label>
-<select [(ngModel)]="user.parish"  class="form-control" >
-<option  *ngFor="let parish of parishes"  [value]="parish">{{parish}}</option>
-</select>
-
 
 
 

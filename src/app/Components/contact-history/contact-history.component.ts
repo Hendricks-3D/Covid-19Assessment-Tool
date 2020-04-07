@@ -103,4 +103,16 @@ export class ContactHistoryComponent implements OnInit {
   }
 
 
+
+  public showC():void{
+    document.getElementById('noC').style.backgroundColor="#fafafa";
+    document.getElementById('yesC').style.backgroundColor="rgb(207, 247, 113)"
+  }
+
+
+  public hideC():void{
+    document.getElementById('yesC').style.backgroundColor="#fafafa";
+    document.getElementById('noC').style.backgroundColor="rgb(207, 247, 113)"
+
+  }
 }
