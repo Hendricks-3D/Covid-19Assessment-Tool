@@ -44,3 +44,20 @@ h3{
     }
 
 }
+
+
+@media only screen and (max-width: 768px) {
+    h3{
+      font-size: 20px;
+  }
+  
+  p b{
+      font-size: 10px;
+      font-weight: 600;
+  }
+  
+  
+  label{
+      font-size: 12px;
+  }
+  }
