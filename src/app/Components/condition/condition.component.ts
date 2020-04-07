@@ -10,7 +10,9 @@ import { DataStateService } from 'src/app/Services/data-state.service';
 export class ConditionComponent implements OnInit {
 
   public user= {} as IUser;
-  public choices =["","N","Y"];
+  
+  public showConditions:boolean = false;
+
   constructor(private router:Router,private userState:DataStateService) { }
 
   ngOnInit(): void {
@@ -83,6 +85,23 @@ export class ConditionComponent implements OnInit {
       document.getElementById('respitory').style.backgroundColor="#fafafa"
     }
     
+  }
+
+
+
+
+  public show():void{
+    document.getElementById('no').style.backgroundColor="#fafafa";
+    document.getElementById('yes').style.backgroundColor="rgb(207, 247, 113)"
+    this.showConditions = true;
+  }
+
+
+  public hide():void{
+    document.getElementById('yes').style.backgroundColor="#fafafa";
+    document.getElementById('no').style.backgroundColor="rgb(207, 247, 113)"
+
+    this.showConditions =false;
   }
 
 }

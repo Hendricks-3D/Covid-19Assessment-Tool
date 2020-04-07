@@ -1,7 +1,29 @@
-    <h3>Travel Details</h3>
+    <h3>Contact & Travel History</h3>
 
     <hr class="line">
 
+    <P><b>
+        Have you been within 6ft of a person with lab-confirmed case of Covid-19 in the past 14 days?
+      </b></P>
+
+    <div class="row">
+
+        <div class="col-lg-4"> 
+            <div class="btn-card " id="yes" (click)="show()">
+        
+              <label >Yes</label>
+            </div>
+        </div>
+        
+        
+        <div class="col-lg-4"> 
+            <div class="btn-card " id="no" (click)="hide()">
+        
+              <label >NO</label>
+            </div>
+        </div>
+          
+        </div>
 
     <div class="card" id="travel" (click)="changeTravel()">
 

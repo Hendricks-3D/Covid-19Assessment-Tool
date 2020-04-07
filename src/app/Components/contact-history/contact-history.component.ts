@@ -10,7 +10,8 @@ import { DataStateService } from 'src/app/Services/data-state.service';
 export class ContactHistoryComponent implements OnInit {
 
   public user= {} as IUser;
-
+ 
+  public showConditions:boolean = false;
   constructor(private router:Router,private userState:DataStateService) { }
 
   ngOnInit(): void {
@@ -85,6 +86,21 @@ export class ContactHistoryComponent implements OnInit {
 
 
 
+
+
+  public show():void{
+    document.getElementById('no').style.backgroundColor="#fafafa";
+    document.getElementById('yes').style.backgroundColor="rgb(207, 247, 113)"
+    this.showConditions = true;
+  }
+
+
+  public hide():void{
+    document.getElementById('yes').style.backgroundColor="#fafafa";
+    document.getElementById('no').style.backgroundColor="rgb(207, 247, 113)"
+
+    this.showConditions =false;
+  }
 
 
 }

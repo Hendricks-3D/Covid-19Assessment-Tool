@@ -6,24 +6,46 @@
 
 <P><b>
   Do you have any chronic medical conditions?
-  Select the ones that apply to you.
 </b></P>
-<div class="card" id="diabetes" (click)="changeDiabetes()">
 
-  <label >Diabetes</label>
+<div class="row">
+
+<div class="col-lg-4"> 
+    <div class="btn-card " id="yes" (click)="show()">
+
+      <label >Yes</label>
+    </div>
 </div>
 
 
-<div class="card" id="hypertension" (click)="changeHypertension()">
+<div class="col-lg-4"> 
+    <div class="btn-card " id="no" (click)="hide()">
 
-  <label >Hypertension</label>
+      <label >NO</label>
+    </div>
+</div>
+  
 </div>
 
-<div class="card" id="respitory" (click)="changeRespitory()">
+<ng-template [ngIf]="showConditions">
+      <div class="card" id="diabetes" (click)="changeDiabetes()">
 
-  <label >Respitory Problem:</label>
- 
-</div>
+      <label >Diabetes</label>
+    </div>
+
+
+    <div class="card" id="hypertension" (click)="changeHypertension()">
+
+      <label >Hypertension</label>
+    </div>
+
+    <div class="card" id="respitory" (click)="changeRespitory()">
+
+      <label >Respitory Problem:</label>
+    
+    </div>
+</ng-template>
+
 
 
     <button type="submit" class="submit-btn" (click)="next()">Next</button>

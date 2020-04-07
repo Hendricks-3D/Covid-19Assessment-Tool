@@ -51,6 +51,30 @@ h3{
     background-color: #fafafa;
   }
 
+  #yes{
+    background-color: #fafafa;
+  }
+
+  #no{
+    background-color: #fafafa;
+  }
+
+
+  .btn-card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 80px;
+    margin: 0 8px 16px;
+    padding: auto;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
   /**
   Media Queries
   */
