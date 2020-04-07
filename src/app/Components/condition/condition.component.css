@@ -51,3 +51,24 @@ h3{
     background-color: #fafafa;
   }
 
+  /**
+  Media Queries
+  */
+
+  @media screen and (max-width: 575px) {
+
+    h3{
+        font-size: 20px;
+    }
+
+    p b{
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+
+    label{
+        font-size: 12px;
+    }
+
+}
