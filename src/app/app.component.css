@@ -258,32 +258,85 @@
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
 
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
 
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
-
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
-
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
   }
 
   @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
+
+    .container{
+      border:1px solid rgb(224, 224, 224);
+      height:600px;
+      width:400px;
+      border-radius: 15px;
+      background-color: #fff;
+      padding-left:0px;
+      box-shadow:15px 20px rgba(207, 207, 207, 0.5);
+      padding-left: 100px;
+  
   }
+
+
+
+    #sidebar {
+      border-radius: 15px  0px 0px 15px;
+
+        width: 150px;
+      
+        background: rgba(132,189,0,1);
+        color: #fff;
+        transition: all 0.3s;
+      
+
+    }
+
+    #sidebar ul li a {
+      padding: 10px;
+      font-size: 0.6em;
+      display: block;
+      color:#fff;
+
+  }
+
+
+  h1{
+    font-size: 20px;
+    margin-left:100px;
+  }
+
+  .h4{
+    font-size: 12px;
+    margin-left:100px;
+  }
+
+  .stats h4{
+    font-size: 14px;
+  }
+  .h4-text{
+    padding-bottom: 10px;
+    margin-left:100px;
+  }
+
+  .stats b{
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  img{
+    height:130px;
+    width:150px;
+   margin-left:100px;
+  }
+
+
+  .min-Text{
+    margin-top: 25px;
+    margin-left: 22px;
+    font-size: 12px;
+    }
+    
+
+  }/**End of media queries*/
+  
 
 
 
@@ -338,7 +391,9 @@ h3{
 }
   
 
-
+.h4-text{
+  padding-bottom: 20px;
+}
 
 
 
@@ -388,7 +443,7 @@ a, a:hover, a:focus {
 ----------------------------------------------------- */
 .wrapper {
     display: flex;
-    align-items: stretch;
+   
 }
 
 #sidebar {
@@ -403,9 +458,6 @@ a, a:hover, a:focus {
 
 }
 
-#sidebar.active {
-    margin-left: -250px;
-}
 
 #sidebar .sidebar-header {
     padding: 20px;
@@ -437,21 +489,6 @@ a, a:hover, a:focus {
 
 
 
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
-    content: '\e259';
-    display: block;
-    position: absolute;
-    right: 20px;
-    font-family: 'Glyphicons Halflings';
-    font-size: 0.6em;
-}
-a[aria-expanded="true"]::before {
-    content: '\e260';
-}
 
 
 ul ul a {
@@ -475,10 +512,7 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-a.download {
-    background: #fff;
-    color: rgb(255, 255, 255);
-}
+
 
 a.article, a.article:hover {
     background: rgba(132,189,0,1) !important;
@@ -499,17 +533,7 @@ a.article, a.article:hover {
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
-}
+
 
 .text{
   display: inline;

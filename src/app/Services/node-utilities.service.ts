@@ -5,7 +5,6 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders ,HttpErrorResponse, } from '@angular/common/http'
-import { Observable } from 'rxjs';
 import { IUser } from '../Interface/iuser';
 
 
