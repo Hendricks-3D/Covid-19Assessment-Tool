@@ -35,12 +35,12 @@ export class DataStateService {
         symptom_running_nose:'N',
         symptom_fever:'N',
         symptom_breathing:'N',
-        symptom_fatique:'N',
+        symptom_fatigue:'N',
         symptom_date:'N',
         symptom_cough:'N',
         symptom_sore_throat:'N',
         symptom_chest_pain:'N',
-    
+        symptom_none:'N',
         //travel information
         travel:'N',
         travel_date:'',

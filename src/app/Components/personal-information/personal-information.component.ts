@@ -32,8 +32,15 @@ ngOnInit(): void {
 
   public submitPersonalInfo():void{
 
-   this.nodeUtil.postData(this.user);
-  console.log(this.user);
+    if(  !(this.user.fullName==='') && !(this.user.parish==='')  &&!(this.user.community==='') 
+    &&  !(this.user.age=='') &&  !(this.user.mobile==='')  && !(this.user.gender==='')
+     && !(this.user.emergency_name==='') && !(this.user.emergency_number==='') ){
+        console.log("great");
+        this.nodeUtil.postData(this.user);
+    }
+
+   
+
 
   }
 

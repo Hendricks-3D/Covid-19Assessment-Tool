@@ -12,6 +12,7 @@ export class ContactHistoryComponent implements OnInit {
   public user= {} as IUser;
  
   public showConditions:boolean = false;
+  public travel:boolean = false;
   constructor(private router:Router,private userState:DataStateService) { }
 
   ngOnInit(): void {
@@ -23,11 +24,15 @@ export class ContactHistoryComponent implements OnInit {
   }
 
   public  next():void{
+    if(this.travel || !(this.user.countries==='') || !(this.user.arrival_date==='')|| !(this.user.flight_number==='')
+    || !(this.user.departure_port==='') || !(this.user.arrival_port==='') )
+    {
     this.router.navigateByUrl('personalInfo');
           //UPDATE THE USER DATA SO OTHER COMPONENTS CAN USE
           this.userState.changeUserData(this.user);
-          //LOG DATA
-          console.log(this.user);
+    }
+
+
   }
 
 
@@ -44,7 +49,7 @@ export class ContactHistoryComponent implements OnInit {
     {
       this.user.travel ='Y'
       document.getElementById('travel').style.backgroundColor="rgb(207, 247, 113)"
-      console.log(this.user.symptom_fatique);
+     
     }else
     {
       this.user.travel= 'N'
@@ -100,6 +105,7 @@ export class ContactHistoryComponent implements OnInit {
     document.getElementById('no').style.backgroundColor="rgb(207, 247, 113)"
 
     this.showConditions =false;
+    this.travel = true;
   }
 
 

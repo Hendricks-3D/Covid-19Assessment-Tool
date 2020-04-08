@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IUser } from 'src/app/Interface/iuser';
 import { Router } from '@angular/router';
 import { DataStateService } from 'src/app/Services/data-state.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 @Component({
   selector: 'app-condition',
   templateUrl: './condition.component.html',
@@ -12,7 +13,7 @@ export class ConditionComponent implements OnInit {
   public user= {} as IUser;
   
   public showConditions:boolean = false;
-
+  public NoCondition = false;
   constructor(private router:Router,private userState:DataStateService) { }
 
   ngOnInit(): void {
@@ -23,11 +24,18 @@ export class ConditionComponent implements OnInit {
       });
   }
   public next():void{
-    this.router.navigateByUrl('contactHis');
+
+    if(this.NoCondition || this.user.pre_diabetes==='Y' || this.user.pre_heart==='Y'
+    || this.user.pre_hypertension==='Y'|| this.user.pre_lung==='Y'|| this.user.pre_respiratory==='Y'
+    || this.user.pre_sickle==='Y')
+    {
+          this.router.navigateByUrl('contactHis');
        //UPDATE THE USER DATA SO OTHER COMPONENTS CAN USE
        this.userState.changeUserData(this.user);
-       //LOG DATA
-       console.log(this.user);
+
+    }
+
+
   }
 
 
@@ -135,7 +143,7 @@ export class ConditionComponent implements OnInit {
   public hide():void{
     document.getElementById('yes').style.backgroundColor="#fafafa";
     document.getElementById('no').style.backgroundColor="rgb(207, 247, 113)"
-
+    this.NoCondition = true;
     this.showConditions =false;
   }
 

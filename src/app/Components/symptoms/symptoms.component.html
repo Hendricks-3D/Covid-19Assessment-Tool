@@ -43,9 +43,8 @@
   <hr class="line">
 
   <P><b>
-    Are you experiencing any of the following symptoms?
-    <br>
-    Please select ALL that apply to you.
+
+   Please select ALL the symptoms below that apply to you.
 </b></P>
 
 
@@ -74,9 +73,9 @@
 
 
 
-        <div class="card" id="fatique" (click)="changeFatique()">
+        <div class="card" id="fatique" (click)="changeFatigue()">
 
-          <label >Fatique</label>
+          <label >Fatigue</label>
       
         </div>
 
@@ -113,6 +112,17 @@
         <div class="form-group">
           <label for="date">First Symptom Date</label>
           <input type="date" class="form-control" id="inputField" placeholder="Symptom Date"  [(ngModel)]="user.symptom_date">
+        </div>
+
+
+        <h3>OR</h3>
+
+
+
+        <div class="card" id="no-symptom" (click)="changeNoSymptom()">
+
+          <label >No symptom</label>
+
         </div>
 
 

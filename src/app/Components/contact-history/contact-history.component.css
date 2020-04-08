@@ -1,5 +1,5 @@
 p{
-    color:rgb(167, 165, 165);
+   
 }
 h3{
     color:black;
@@ -44,7 +44,7 @@ h3{
     background-color: #fafafa;
     height: 20px;
     width: 20px;
-    margin: 0 2px 16px;
+    margin-right:4px;
     padding-top: 5px;
     display:inline-flex;
     flex-direction: row;
@@ -128,7 +128,8 @@ h3{
   Media Queries
   */
 
-  @media screen and (max-width: 575px) {
+
+  @media screen and (max-width: 667px) {
 
     h3{
         font-size: 20px;
@@ -144,10 +145,36 @@ h3{
         font-size: 12px;
     }
 
+    
+
+}
+  @media screen and (max-width: 568px) {
+
+    h3{
+        font-size: 20px;
+    }
+
+    h4{
+      font-size: 20px;
+    }
+
+    p b{
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+
+    label{
+        font-size: 12px;
+    }
+
+
+    
+
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 736px) {
   h3{
     font-size: 20px;
 }
@@ -163,6 +190,8 @@ label{
     font-weight: 600;
 }
 }
+
+
 
 
 

@@ -15,12 +15,12 @@ export interface IUser {
     symptom_running_nose:string;
     symptom_fever:string;
     symptom_breathing:string;
-    symptom_fatique;
+    symptom_fatigue;
     symptom_cough:string;
     symptom_sore_throat:string;
     symptom_chest_pain:string;
     symptom_date:string;
-
+    symptom_none:string;
     //travel information
     travel:string;
     travel_date:string;

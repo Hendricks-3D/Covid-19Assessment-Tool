@@ -22,14 +22,22 @@ export class SymptomsComponent implements OnInit {
   }
 
   public next():void{
-    this.router.navigateByUrl('condition');
 
-    //UPDATE THE USER DATA SO OTHER COMPONENTS CAN USE
-    this.userState.changeUserData(this.user);
-    //LOG DATA
-    console.log(this.user);
+    if(this.user.symptom_none==='Y' || this.user.symptom_running_nose==='Y'|| this.user.symptom_breathing==='Y'
+    || this.user.symptom_chest_pain==='Y'|| this.user.symptom_cough==='Y'|| this.user.symptom_fatigue==='Y'|| this.user.symptom_fever==='Y'
+    || this.user.symptom_sore_throat==='Y')
+    {
+      this.router.navigateByUrl('condition');
 
-    this.getLocation();
+      //UPDATE THE USER DATA SO OTHER COMPONENTS CAN USE
+      this.userState.changeUserData(this.user);
+
+  
+      this.getLocation();
+    }else{
+      return;
+    }
+   
   }
 
 
@@ -104,16 +112,16 @@ export class SymptomsComponent implements OnInit {
     
   }
 
-  changeFatique():void{
+  changeFatigue():void{
     console.log("It works");
-    if(this.user.symptom_fatique===''|| this.user.symptom_fatique=="N")
+    if(this.user.symptom_fatigue===''|| this.user.symptom_fatigue=="N")
     {
-      this.user.symptom_fatique= 'Y'
+      this.user.symptom_fatigue= 'Y'
       document.getElementById('fatique').style.backgroundColor="rgb(207, 247, 113)"
-      console.log(this.user.symptom_fatique);
+      console.log(this.user.symptom_fatigue);
     }else
     {
-      this.user.symptom_fatique = 'N'
+      this.user.symptom_fatigue = 'N'
       document.getElementById('fatique').style.backgroundColor="#fafafa"
     }
     
@@ -162,6 +170,23 @@ export class SymptomsComponent implements OnInit {
     {
       this.user.symptom_sore_throat = 'N'
       document.getElementById('throat').style.backgroundColor="#fafafa"
+    }
+    
+  }
+
+
+
+  changeNoSymptom():void{
+    console.log("It works");
+    if(this.user.symptom_none===''|| this.user.symptom_none=="N")
+    {
+      this.user.symptom_none= 'Y'
+      document.getElementById('no-symptom').style.backgroundColor="rgb(207, 247, 113)"
+      
+    }else
+    {
+      this.user.symptom_none = 'N'
+      document.getElementById('no-symptom').style.backgroundColor="#fafafa"
     }
     
   }
