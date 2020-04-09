@@ -351,7 +351,7 @@
 
         width: 100px;
       
-        background: rgba(132,189,0,1);
+        background: #84BD00;
         color: #fff;
         transition: all 0.3s;
       
@@ -388,6 +388,7 @@
   .stats b{
     font-weight: 600;
     font-size: 12px;
+   
   }
 
   img{
@@ -694,6 +695,14 @@ padding-right: 2px;
 
 .stats{
   padding-right: 10px;
+}
+
+.stats h4{
+ color:#ffffff;
+}
+
+.stats b{
+  color:#ffffff;
 }
 
 
