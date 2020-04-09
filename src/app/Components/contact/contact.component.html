@@ -1,0 +1,178 @@
+   
+
+<div class="row" style="float: right">
+    <div clas="col-lg-3">
+      <div class="page-number-card  complete"  >
+  
+        <label >1</label>
+      </div>
+    </div>
+  
+    <div clas="col-lg-3">
+      <div class="page-number-card  complete" >
+  
+        <label >2</label>
+      </div>
+    </div>
+  
+    <div clas="col-lg-3">
+  
+      <div class="page-number-card  complete" >
+  
+        <label >3</label>
+      </div> 
+  
+    </div>
+  
+    <div clas="col-lg-3">
+      <div class="page-number-card  incomplete" >
+  
+        <label >4</label>
+      </div>
+    </div>
+   
+   </div>
+   <h3>Contact History</h3>
+
+    <hr class="line">
+
+
+
+    <div class="scroll">
+        <div >
+
+            
+                <P><b>
+                  Have you been in close contact with any confirmed COVID-19 cases within the last 14 days? 
+                </b></P>
+
+                <div class="row">
+
+                    <div class="col-lg-4"> 
+                        <div class="btn-card " id="yes-confirm" (click)="yesConfirm()">
+                    
+                        <label >Yes</label>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-lg-4"> 
+                        <div class="btn-card " id="no-confirm" (click)="noConfirm()">
+                    
+                        <label >No</label>
+                        </div>
+                    </div>
+                    
+                    </div>
+
+
+
+            </div>
+
+
+
+            <div >
+
+            
+              <P><b>
+                Have you been in close contact with any suspected COVID-19 cases within the last 14 days?
+              </b></P>
+
+              <div class="row">
+
+                  <div class="col-lg-4"> 
+                      <div class="btn-card " id="yes-suspect" (click)="yesSuspect()">
+                  
+                      <label >Yes</label>
+                      </div>
+                  </div>
+                  
+                  
+                  <div class="col-lg-4"> 
+                      <div class="btn-card " id="no-suspect" (click)="noSuspect()">
+                  
+                      <label >No</label>
+                      </div>
+                  </div>
+                  
+                  </div>
+
+
+
+          </div>
+
+
+
+          <div >
+
+            
+            <P><b>
+              Have you been in close contact with anyone who has COVID-19 symptoms within the last 14 days?
+            </b></P>
+
+            <div class="row">
+
+                <div class="col-lg-4"> 
+                    <div class="btn-card " id="yes-symptom" (click)="yesSymptom()">
+                
+                    <label >Yes</label>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-4"> 
+                    <div class="btn-card " id="no-symptom" (click)="noSymptom()">
+                
+                    <label >No</label>
+                    </div>
+                </div>
+                
+                </div>
+
+
+
+        </div>
+
+
+        <div >
+
+            
+          <P><b>
+            Have you been in close contact with someone who has travelled overseas within the last 14 days?
+          </b></P>
+
+          <div class="row">
+
+              <div class="col-lg-4"> 
+                  <div class="btn-card " id="yes-travel" (click)="yesTravel()">
+              
+                  <label >Yes</label>
+                  </div>
+              </div>
+              
+              
+              <div class="col-lg-4"> 
+                  <div class="btn-card " id="no-travel" (click)="noTravel()">
+              
+                  <label >No</label>
+                  </div>
+              </div>
+              
+              </div>
+
+
+
+      </div>
+
+
+
+            <ng-template [ngIf]="showConditions">
+
+              which country did they return from?
+            </ng-template>
+
+
+</div>
+
+
+<button type="submit" class="submit-btn" (click)="next()">Next</button>

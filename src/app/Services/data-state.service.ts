@@ -46,6 +46,11 @@ export class DataStateService {
         travel_date:'',
         contact_travel_other:'N',
         contact_flu_other:'N',
+        //contact
+        contact_confirm:'N',
+        contact_suspect:'N',
+        contact_symptom:'N',
+        contact_travel:'N',
     
         //Pre Existing condition
         pre_diabetes:'N',

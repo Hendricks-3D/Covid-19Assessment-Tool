@@ -27,7 +27,7 @@ export class ContactHistoryComponent implements OnInit {
     if(this.travel || !(this.user.countries==='') || !(this.user.arrival_date==='')|| !(this.user.flight_number==='')
     || !(this.user.departure_port==='') || !(this.user.arrival_port==='') )
     {
-    this.router.navigateByUrl('personalInfo');
+    this.router.navigateByUrl('contact');
           //UPDATE THE USER DATA SO OTHER COMPONENTS CAN USE
           this.userState.changeUserData(this.user);
     }

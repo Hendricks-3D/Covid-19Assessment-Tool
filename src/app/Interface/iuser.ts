@@ -43,6 +43,12 @@ export interface IUser {
     departure_port:string;
     arrival_port:string;
 
+    //contact
+    contact_confirm:string;//Stores where or not user was with a confirmed covid case
+    contact_suspect:string;//Stores where or not user was with someone who is a coivid suspect
+    contact_symptom:string;//Stores where or not user was with someone who has covid symptom
+    contact_travel:string;//Stores where or not user was with someone who travel
+
     //emergency info
     emergency_name:string;
     emergency_number:string;

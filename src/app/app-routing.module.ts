@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PersonalInformationComponent } from './Components/personal-information/personal-information.component';
-import { ContactHistoryComponent } from './Components/contact-history/contact-history.component';
+import { ContactHistoryComponent } from './Components/Travel/contact-history.component';
 import { SymptomsComponent } from './Components/symptoms/symptoms.component';
 import { ConditionComponent } from './Components/condition/condition.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
       path:'condition',
       component:ConditionComponent
+    },
+    {
+      path:'contact',
+      component:ContactComponent
     }
   
 ];
