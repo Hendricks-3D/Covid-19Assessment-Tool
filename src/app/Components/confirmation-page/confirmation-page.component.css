@@ -1,0 +1,14 @@
+.content{
+    align-items: center;
+}
+
+
+
+.submit-btn{
+    background-color: #000;
+    border-radius: 50px;
+    color:white;
+    width:90px;
+    height:30px;
+    margin:50px 30px 30px 70px;
+}

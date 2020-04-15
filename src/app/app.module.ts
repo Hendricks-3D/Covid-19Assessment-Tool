@@ -9,7 +9,7 @@ import { SymptomsComponent } from './Components/symptoms/symptoms.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConditionComponent } from './Components/condition/condition.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { ConfirmationPageComponent } from './Components/confirmation-page/confirmation-page.component';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     SymptomsComponent,
     ConditionComponent,
     ContactComponent,
-    ConfirmationComponent
+    ConfirmationPageComponent
   ],
   imports: [
     BrowserModule,

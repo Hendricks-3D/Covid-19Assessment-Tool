@@ -5,6 +5,7 @@ import { ContactHistoryComponent } from './Components/Travel/contact-history.com
 import { SymptomsComponent } from './Components/symptoms/symptoms.component';
 import { ConditionComponent } from './Components/condition/condition.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ConfirmationPageComponent } from './Components/confirmation-page/confirmation-page.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
     {
       path:'contact',
       component:ContactComponent
+    },
+    {
+      path:'confirmation',
+      component:ConfirmationPageComponent
     }
   
 ];

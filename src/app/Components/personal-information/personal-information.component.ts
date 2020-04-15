@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IUser } from 'src/app/Interface/iuser';
 import { NodeUtilitiesService } from 'src/app/Services/node-utilities.service';
 import { DataStateService } from 'src/app/Services/data-state.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-personal-information',
@@ -20,7 +21,7 @@ export class PersonalInformationComponent implements OnInit {
 ];
 
  
-constructor(private userState:DataStateService,private nodeUtil:NodeUtilitiesService) { }
+constructor(private userState:DataStateService,private nodeUtil:NodeUtilitiesService,private router:Router) { }
 
 ngOnInit(): void {
 
@@ -36,7 +37,9 @@ ngOnInit(): void {
     &&  !(this.user.age=='') &&  !(this.user.mobile==='')  && !(this.user.gender==='')
      && !(this.user.emergency_name==='') && !(this.user.emergency_number==='') ){
         console.log("great");
+
         this.nodeUtil.postData(this.user);
+        this.router.navigateByUrl('confirmation');
     }
 
    

@@ -13,6 +13,8 @@ export class ContactHistoryComponent implements OnInit {
  
   public showConditions:boolean = false;
   public travel:boolean = false;
+
+  public noTravel='N';
   constructor(private router:Router,private userState:DataStateService) { }
 
   ngOnInit(): void {
@@ -106,6 +108,16 @@ export class ContactHistoryComponent implements OnInit {
 
     this.showConditions =false;
     this.travel = true;
+
+    //Empty travel details if No is selected
+    if(this.showConditions){
+      this.travel;
+      this.user.countries==='';
+      this.user.arrival_date==='';
+      this.user.flight_number==='';
+      this.user.departure_port==='';
+      this.user.arrival_port==='';
+    }
   }
 
 

@@ -1,0 +1,21 @@
+<div class="content">
+
+
+<h4>Thank you for your cooperation</h4>
+
+<hr class="line">
+
+<p> Please contact --Phone number-- for further information.</p>
+
+
+
+<p *ngIf="user.symptom_none==='N' || user.travel!==''"> 
+    Pleace practice self isolation and social distancing. 
+    <br>
+    
+    You will be contacted by the Ministry of Health and Wellness.  
+</p>
+
+<button type="submit" class="submit-btn" (click)="next()">Ok</button>
+
+</div>

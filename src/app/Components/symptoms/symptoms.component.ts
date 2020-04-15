@@ -15,6 +15,8 @@ export class SymptomsComponent implements OnInit {
 
   ngOnInit(): void {
 
+    
+
     //SET THE USER DATA TO THE DEFAULT OBSERVABLE DATA FROM THE SERVICE CLASS
       this.userState.user.subscribe(currentData=>{
         this.user = currentData;
@@ -27,6 +29,8 @@ export class SymptomsComponent implements OnInit {
     || this.user.symptom_chest_pain==='Y'|| this.user.symptom_cough==='Y'|| this.user.symptom_fatigue==='Y'|| this.user.symptom_fever==='Y'
     || this.user.symptom_sore_throat==='Y')
     {
+
+
       this.router.navigateByUrl('condition');
 
       //UPDATE THE USER DATA SO OTHER COMPONENTS CAN USE
@@ -68,7 +72,11 @@ export class SymptomsComponent implements OnInit {
     if(this.user.symptom_running_nose===''|| this.user.symptom_running_nose=="N")
     {
       this.user.symptom_running_nose = 'Y'
-      document.getElementById('nose').style.backgroundColor="rgb(207, 247, 113)"
+      document.getElementById('nose').style.backgroundColor="rgb(207, 247, 113)";
+
+      //change No symptom to N
+      if(this.user.symptom_none==='Y')
+      this.changeNoSymptom()
      
     }else
     {
@@ -85,6 +93,10 @@ export class SymptomsComponent implements OnInit {
     {
       this.user.symptom_fever = 'Y'
       document.getElementById('fever').style.backgroundColor="rgb(207, 247, 113)"
+
+      //change No symptom to N
+      if(this.user.symptom_none==='Y')
+      this.changeNoSymptom()
      
     }else
     {
@@ -102,6 +114,9 @@ export class SymptomsComponent implements OnInit {
     {
       this.user.symptom_breathing= 'Y'
       document.getElementById('breathing').style.backgroundColor="rgb(207, 247, 113)"
+      //change No symptom to N
+      if(this.user.symptom_none==='Y')
+      this.changeNoSymptom()
       
     }else
     {
@@ -119,6 +134,10 @@ export class SymptomsComponent implements OnInit {
       this.user.symptom_fatigue= 'Y'
       document.getElementById('fatique').style.backgroundColor="rgb(207, 247, 113)"
       console.log(this.user.symptom_fatigue);
+
+      //change No symptom to N
+      if(this.user.symptom_none==='Y')
+      this.changeNoSymptom()
     }else
     {
       this.user.symptom_fatigue = 'N'
@@ -133,7 +152,11 @@ export class SymptomsComponent implements OnInit {
     if(this.user.symptom_cough===''|| this.user.symptom_cough=="N")
     {
       this.user.symptom_cough= 'Y'
-      document.getElementById('cough').style.backgroundColor="rgb(207, 247, 113)"
+      document.getElementById('cough').style.backgroundColor="rgb(207, 247, 113)";
+
+      //change No symptom to N
+      if(this.user.symptom_none==='Y')
+      this.changeNoSymptom();
       
     }else
     {
@@ -149,6 +172,9 @@ export class SymptomsComponent implements OnInit {
     {
       this.user.symptom_chest_pain= 'Y'
       document.getElementById('chest').style.backgroundColor="rgb(207, 247, 113)"
+      //change No symptom to N
+      if(this.user.symptom_none==='Y')
+      this.changeNoSymptom()
      
     }else
     {
@@ -164,7 +190,11 @@ export class SymptomsComponent implements OnInit {
     if(this.user.symptom_sore_throat===''|| this.user.symptom_sore_throat=="N")
     {
       this.user.symptom_sore_throat= 'Y'
-      document.getElementById('throat').style.backgroundColor="rgb(207, 247, 113)"
+      document.getElementById('throat').style.backgroundColor="rgb(207, 247, 113)";
+
+      //change No symptom to N
+      if(this.user.symptom_none==='Y')
+      this.changeNoSymptom()
       
     }else
     {
@@ -180,13 +210,35 @@ export class SymptomsComponent implements OnInit {
     console.log("It works");
     if(this.user.symptom_none===''|| this.user.symptom_none=="N")
     {
-      this.user.symptom_none= 'Y'
-      document.getElementById('no-symptom').style.backgroundColor="rgb(207, 247, 113)"
-      
+      this.user.symptom_none= 'Y';
+      document.getElementById('no-symptom').style.backgroundColor="rgb(207, 247, 113)";
+
+      if(this.user.symptom_running_nose==='Y')
+        this.runnyNose();
+
+      if(this.user.symptom_breathing==='Y')
+        this.changeBreathing();
+
+      if(this.user.symptom_chest_pain==='Y')
+      this.changeChest()
+
+       if(this.user.symptom_cough==='Y')
+        this.changeCough();
+       
+       if(this.user.symptom_fatigue==='Y')
+       this.changeFatigue();
+
+      if(this.user.symptom_fever==='Y')
+      this.changeFever()
+
+      if(this.user.symptom_sore_throat==='Y')
+      this.changeThroat()
+
     }else
     {
       this.user.symptom_none = 'N'
       document.getElementById('no-symptom').style.backgroundColor="#fafafa"
+
     }
     
   }
