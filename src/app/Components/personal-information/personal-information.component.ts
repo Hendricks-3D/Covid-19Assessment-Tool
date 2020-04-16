@@ -3,6 +3,7 @@ import { IUser } from 'src/app/Interface/iuser';
 import { NodeUtilitiesService } from 'src/app/Services/node-utilities.service';
 import { DataStateService } from 'src/app/Services/data-state.service';
 import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-personal-information',
@@ -21,7 +22,7 @@ export class PersonalInformationComponent implements OnInit {
 ];
 
  
-constructor(private userState:DataStateService,private nodeUtil:NodeUtilitiesService,private router:Router) { }
+constructor(private userState:DataStateService,private nodeUtil:NodeUtilitiesService,private router:Router,private parent:AppComponent) { }
 
 ngOnInit(): void {
 
@@ -29,6 +30,8 @@ ngOnInit(): void {
     this.userState.user.subscribe(currentData=>{
       this.user = currentData;
     });
+
+    this.parent.ngOnInit();
 }
 
   public submitPersonalInfo():void{

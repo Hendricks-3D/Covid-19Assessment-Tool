@@ -11,20 +11,23 @@ export class SymptomsComponent implements OnInit {
 
   public user = {} as IUser;
  
-  constructor(private router:Router,private userState:DataStateService) { }
+  constructor(private router:Router,private userState:DataStateService ) { }
 
   ngOnInit(): void {
 
     
-
+      
     //SET THE USER DATA TO THE DEFAULT OBSERVABLE DATA FROM THE SERVICE CLASS
       this.userState.user.subscribe(currentData=>{
         this.user = currentData;
       });
+
+      
   }
 
   public next():void{
 
+    this.user.navigationTracker=2;
     if(this.user.symptom_none==='Y' || this.user.symptom_running_nose==='Y'|| this.user.symptom_breathing==='Y'
     || this.user.symptom_chest_pain==='Y'|| this.user.symptom_cough==='Y'|| this.user.symptom_fatigue==='Y'|| this.user.symptom_fever==='Y'
     || this.user.symptom_sore_throat==='Y')
@@ -242,6 +245,10 @@ export class SymptomsComponent implements OnInit {
     }
     
   }
+
+
+
+
 
   //------------------------------------------------------------------------------------------
 

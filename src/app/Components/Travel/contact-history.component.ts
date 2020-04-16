@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IUser } from 'src/app/Interface/iuser';
 import { Router } from '@angular/router';
 import { DataStateService } from 'src/app/Services/data-state.service';
+import { AppComponent } from 'src/app/app.component';
 @Component({
   selector: 'app-contact-history',
   templateUrl: './contact-history.component.html',
@@ -15,7 +16,7 @@ export class ContactHistoryComponent implements OnInit {
   public travel:boolean = false;
 
   public noTravel='N';
-  constructor(private router:Router,private userState:DataStateService) { }
+  constructor(private router:Router,private userState:DataStateService,private parent:AppComponent) { }
 
   ngOnInit(): void {
 
@@ -23,9 +24,13 @@ export class ContactHistoryComponent implements OnInit {
       this.userState.user.subscribe(currentData=>{
         this.user = currentData;
       });
+
+      this.parent.ngOnInit();
   }
 
   public  next():void{
+    this.user.navigationTracker = 4;
+    this.userState.changeUserData(this.user);
     if(this.travel || !(this.user.countries==='') || !(this.user.arrival_date==='')|| !(this.user.flight_number==='')
     || !(this.user.departure_port==='') || !(this.user.arrival_port==='') )
     {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IUser } from 'src/app/Interface/iuser';
 import { Router } from '@angular/router';
 import { DataStateService } from 'src/app/Services/data-state.service';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-contact',
@@ -14,7 +15,7 @@ export class ContactComponent implements OnInit {
  
   public showConditions:boolean = false;
   public travel:boolean = false;
-  constructor(private router:Router,private userState:DataStateService) { }
+  constructor(private router:Router,private userState:DataStateService, private parent:AppComponent) { }
 
   ngOnInit(): void {
 
@@ -22,10 +23,12 @@ export class ContactComponent implements OnInit {
       this.userState.user.subscribe(currentData=>{
         this.user = currentData;
       });
+
+      this.parent.ngOnInit();
   }
 
   public next():void{
-
+    this.user.navigationTracker=5;
     this.router.navigateByUrl('personalInfo');
           //UPDATE THE USER DATA SO OTHER COMPONENTS CAN USE
           this.userState.changeUserData(this.user);

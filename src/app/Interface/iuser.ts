@@ -53,4 +53,6 @@ export interface IUser {
     emergency_name:string;
     emergency_number:string;
 
+    navigationTracker:number;
+
 }

@@ -71,6 +71,7 @@ export class DataStateService {
       emergency_name:'',
       emergency_number:'',
 
+      navigationTracker:1
 
     
     });

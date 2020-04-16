@@ -3,6 +3,7 @@ import { IUser } from 'src/app/Interface/iuser';
 import { Router } from '@angular/router';
 import { DataStateService } from 'src/app/Services/data-state.service';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { AppComponent } from 'src/app/app.component';
 @Component({
   selector: 'app-condition',
   templateUrl: './condition.component.html',
@@ -14,7 +15,7 @@ export class ConditionComponent implements OnInit {
   
   public showConditions:boolean = false;
   public NoCondition = false;
-  constructor(private router:Router,private userState:DataStateService) { }
+  constructor(private router:Router,private userState:DataStateService, private parent:AppComponent) { }
 
   ngOnInit(): void {
 
@@ -22,9 +23,12 @@ export class ConditionComponent implements OnInit {
       this.userState.user.subscribe(currentData=>{
         this.user = currentData;
       });
+
+      this.parent.ngOnInit();
   }
   public next():void{
-
+    this.user.navigationTracker=3;
+    this.userState.changeUserData(this.user);
     if(this.NoCondition || this.user.pre_diabetes==='Y' || this.user.pre_heart==='Y'
     || this.user.pre_hypertension==='Y'|| this.user.pre_lung==='Y'|| this.user.pre_respiratory==='Y'
     || this.user.pre_sickle==='Y')
