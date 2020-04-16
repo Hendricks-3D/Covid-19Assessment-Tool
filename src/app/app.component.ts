@@ -44,6 +44,16 @@ export class AppComponent {
       document.getElementById('symptom-text').style.color="rgba(132,189,0,1)";
    
       console.log(this.user.navigationTracker);
+
+
+      document.getElementById('side-personal').style.backgroundColor="rgba(132,189,0,1)";
+      document.getElementById('personal-text').style.color="#ffffff";
+
+
+      document.getElementById('contact-text').style.color="#ffffff";
+      document.getElementById('travel-text').style.color="#ffffff";
+      document.getElementById('condition-text').style.color="#ffffff";
+      
     }
     else if(this.user.navigationTracker===2){//Highlight condition
       console.log(this.user.navigationTracker);

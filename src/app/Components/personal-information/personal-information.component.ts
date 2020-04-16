@@ -41,7 +41,7 @@ ngOnInit(): void {
      && !(this.user.emergency_name==='') && !(this.user.emergency_number==='') ){
         console.log("great");
 
-        this.nodeUtil.postData(this.user);
+        //this.nodeUtil.postData(this.user);
         this.router.navigateByUrl('confirmation');
     }
 

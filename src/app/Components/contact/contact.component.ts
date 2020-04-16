@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit {
           //UPDATE THE USER DATA SO OTHER COMPONENTS CAN USE
           this.userState.changeUserData(this.user);
     
-        console.log(this.user);
+
 
 
   }

@@ -9,7 +9,10 @@
 
 
 
-<p *ngIf="user.symptom_none==='N' || user.travel!==''"> 
+<p *ngIf="user.symptom_none==='N' || user.travel!==''   ||  user.contact_confirm==='Y'
+||  user.contact_suspect==='Y'||  user.contact_symptom==='Y' ||  user.contact_travel==='Y'
+
+"> 
     Pleace practice self isolation and social distancing. 
     <br>
     

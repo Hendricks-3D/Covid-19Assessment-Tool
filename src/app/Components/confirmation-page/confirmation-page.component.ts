@@ -15,17 +15,21 @@ export class ConfirmationPageComponent implements OnInit {
   constructor(private router:Router,private userState:DataStateService) { }
 
   ngOnInit(): void {
-    this.user.travel=''
+     //SET THE USER DATA TO THE DEFAULT OBSERVABLE DATA FROM THE SERVICE CLASS
+     this.userState.user.subscribe(currentData=>{
+      this.user = currentData;
+    });
+
   }
 
 
   public next():void{
-
-    this.router.navigateByUrl('symptom');
+this.user.navigationTracker=1;
+    this.router.navigateByUrl('symptoms');
           //UPDATE THE USER DATA SO OTHER COMPONENTS CAN USE
           this.userState.changeUserData(this.user);
     
-        console.log(this.user);
+  
 
 
   }
